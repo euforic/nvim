@@ -18,6 +18,15 @@ if packer_status_ok then
     -- Lua functions
     { "nvim-lua/plenary.nvim" },
 
+    -- Typescript
+    {
+      "jose-elias-alvarez/typescript.nvim",
+      ft = { "ts" },
+      config = function()
+        require("configs.typescript").config()
+      end,
+    },
+
     -- Golang Helpers
     {
       "ray-x/go.nvim",
@@ -31,6 +40,9 @@ if packer_status_ok then
 
     -- Popup API
     { "nvim-lua/popup.nvim" },
+
+    -- CodePilot
+    { "github/copilot.vim"},
 
     -- Indent detection
     {

@@ -37,3 +37,7 @@ local polish = utils.user_plugin_opts("polish", nil, false)
 if type(polish) == "function" then
   polish()
 end
+
+vim.g.copilot_no_tab_map = true
+vim.g.copilot_assume_mapped = true
+vim.api.nvim_set_keymap("i", "<C-Y>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
